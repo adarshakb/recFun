@@ -76,10 +76,10 @@ object Main {
       return 0;
     }
     
-    if(coins.length < 0) 
+    if(coins == Nil) 
       return 0;
     
-    return countForMe(money,coins.tail) + countForMe(money-coins.head,coins.tail);
+    return countForMe(money-coins.head,coins) + countForMe(money,coins.tail) ;
     
   }
 }
